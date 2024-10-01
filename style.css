@@ -1,0 +1,665 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+/*-----univerzalno korišteni početak-----*/
+/*---paralaks----*/
+.paralaks{
+    display: grid;
+}
+.paralaks img, .paralaks>div{
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+}
+.paralaks img{
+    z-index: -5;
+}
+/*----drop-cap2-----*/
+.drop-cap2:first-letter{
+    color: rgb(29, 29, 29);
+    font-family: 'Merriweather', serif;
+    float: left;
+    font-size: 5.6vw;
+    line-height: 46%;
+    padding-top: 2%;
+    padding-right: 1.1%;
+    padding-left: 0.5%;
+}
+/*----drop-cap1-----*/
+.drop-cap1:first-letter{
+    color: rgb(49, 49, 49);
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    float: left;
+    font-size: 5.6vw;
+    line-height: 46%;
+    padding-top: 2%;
+    padding-right: 1.1%;
+    padding-left: 0.5%;
+    margin: 0 2% 0 0;
+}
+/*----drop-cap3-----*/
+.drop-cap3:first-letter{
+    font-family: 'Merriweather', serif;
+    float: left;
+    font-size: 3vw;
+    line-height: 46%;
+    padding-top: 4%;
+    padding-right: 1.2%;
+}
+/*----drop-cap4-----*/
+.drop-cap4:first-letter{
+    color: rgb(29, 29, 29);
+    font-family: 'Merriweather', serif;
+    float: left;
+    font-size: 5vw;
+    line-height: 46%;
+    padding-top: 4%;
+    padding-right: 1.2%;
+}
+/*---------sjena---------*/
+.sjena{
+    box-shadow: 0 3px 15px rgb(58, 55, 54);
+}
+/*---------boje slova---------*/
+.svijetla-slova{
+    color: rgb(199, 199, 199);
+}
+.tamna-slova{
+    color: rgb(37, 37, 37);
+}
+/*--------------glavni-medjuopis----------*/
+.glavni-medjuopis{
+    width: 100vw;
+    height: auto;
+    background-color: rgb(240, 233, 219);
+    display: grid;
+    position: relative;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-image: url(slike/paper3.jpg);
+}
+.glavni-medjuopis>div{
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    place-self: center;
+    padding: 5%;
+}
+
+.glavni-medjuopis-unutar{
+    width: 80vw;
+    height: auto;
+    transform-origin: bottom;
+}
+
+.glavni-medjuopis-unutar .sadrzaj{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2% 5%;
+    background-size:cover;
+}
+.kazaliste{
+    width: 100%;
+    height: auto;
+    z-index: 3;
+}
+/*---------------medjuopis--------*/
+.medjuopis{
+    width: 100%;
+    background-color: rgb(240, 233, 219);
+    display: grid;
+    position: relative;
+    z-index: 20;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-image: url(slike/paper3.jpg);
+}
+.medjuopis>div{
+    grid-column: 1;
+    grid-row: 1;
+}
+.medjuopis-unutar{
+    width: 60vw;
+    height: auto;
+    display: flex;
+    margin: 7% 0;
+}
+.medjuopis-unutar .lijevi{
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 1%;
+
+}
+.medjuopis-unutar .desni{
+    width: 90%;
+
+}
+/*---------------tekuci-tekst--------*/
+
+.naslov2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(236, 102, 49);
+    padding-bottom: 2%;
+}
+.datum{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #5c5c5c;
+}
+.centar{
+    font-family: "Archivo", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 1.6vw;
+    color: rgb(37, 37, 37);
+    padding: 0 2%;
+    line-height: 1.5;
+    text-align: justify;
+    z-index: 2;
+}
+.oznake{
+    margin-top: 1%;
+    box-shadow: 1px 1px 2px #636363;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+
+}
+/*-------tekst-na-slikama------*/
+.tekst-na-slikama{
+    display: flex;
+    z-index: 10;
+    padding-left: 4%;
+    margin-top: 2%;
+}
+.tekst-na-slikama>div{
+    flex: 50vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.tekst-na-slikama>div .tekst{
+    display: flex;
+    margin-top: 4%;
+}
+.tekst-na-slikama>div .tekst p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.05vw;
+    line-height: 1.4;
+    padding-right:3vw;
+    text-align: justify;
+}
+.tekst-na-slikama>div .tekst>div{
+    width: 50%;
+}
+.tekst-na-slikama>div .naslov h3{
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4vw;
+    margin: 2% 0;
+    font-weight: lighter;
+}
+/*-------tekst-responzivni------*/
+.tekst-responzivni{
+    font-size: 1.5vw;
+    padding: 3% 0;
+}
+/*-----univerzalno korišteni kraj-----*/
+
+.pocetna .sadrzaj .logo img{
+    margin: 2% 3%;
+    width: 12vw;
+}
+.pocetna .sadrzaj .naslovi{
+    display: flex;
+}
+.pocetna .sadrzaj .naslovi .lijevi{
+    width: 30%;
+}
+.pocetna .sadrzaj .naslovi .desni{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+.pocetna .sadrzaj .naslovi .desni .naslov-unutar{
+    width: 70%;
+    margin-top: 10%;
+}
+img.pocetna-mreza{
+    opacity: 1;
+}
+.pocetna-pozadina{
+    border: 10px solid rgb(39, 39, 39);
+}
+img.cvijet{
+    width: 2vw;
+    height: auto;
+}
+.desni .naslov-unutar p.naslov{
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size:6.5vw;
+    color: rgb(37, 37, 37);
+    line-height: 1;
+    padding: 3% 0;
+}
+.izdvojeno{
+    color: rgb(236, 102, 49);
+}
+.desni .naslov-unutar p.kategorija{
+    font-size:1.5vw;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(56, 56, 56);
+    display: flex;
+    align-items: center;
+}
+.desni .naslov-unutar .link{
+    margin: 5% 0;
+    width: 100%;
+}
+.desni .naslov-unutar .link a{
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: rgb(56, 56, 56);
+    padding: 2%;
+    font-size: 1.2vw;
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 100px;
+    transition: 0.2s ease-in-out;
+}
+.desni .naslov-unutar .link a:hover{
+    background-color: rgb(49, 68, 236);
+    color: white;
+    border: 2px solid rgb(49, 68, 236);
+}
+/*--------------mladost-------------*/
+.mladost{
+    position: relative;
+}
+.mladost .mladost-unutar{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2vw;
+    color: rgb(37, 37, 37);
+    line-height: 1.5;
+    text-align: justify;
+}
+.mladost .mladost-unutar .lijevi{
+    width: 45%;
+}
+.mladost .mladost-unutar .desni{
+    width: 50%;
+}
+.mladost .mladost-unutar .lijevi .gore .linija{
+    width: 20vw;
+    height: 20px;
+    background-color:rgb(37, 37, 37);
+    margin-bottom: 5%;
+}
+.mladost .mladost-unutar .desni .gore h2{
+    font-size: 6vw;
+    color: rgb(37, 37, 37);
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+}
+.mladost .mladost-unutar .desni .gore{
+    border-bottom: 2px solid rgb(37, 37, 37);    
+    padding-bottom: 1%;
+    margin-bottom: 8%;
+}
+.mladost-lijevi{
+    transform-origin: bottom left;
+}
+.mladost-desni{
+    transform-origin: bottom right;
+}
+/*-----pocetak------------*/
+.poravnato-desno{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 7%;
+}
+/*-------------prvi---------------*/
+
+.prvi .prvi-herkul{
+    transform-origin: bottom center;
+}
+.prvi-tekst>div.desni{
+    margin-left: 3%;
+}
+/*----------drugi----------*/
+
+.drugi .drugi-tekst{
+    padding-left: 2%;
+    margin-top: 1%;
+}
+
+.drugi .drugi-prednji{
+    transform-origin: bottom left;
+}
+.drugi .drugi-srednji{
+    transform-origin: bottom right;
+}
+.drugi .drugi-srednji{
+    transform-origin: bottom left;
+}
+/*---------animacija1----------*/
+.animacija1{
+    width: 100%;
+    background-color: rgb(240, 233, 219);
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animacija1-unutar{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 12% 0;
+}
+.animacija1-unutar .animacija1-pravokutnik{
+    width: 40%;
+    height: 4vh;
+    border: 2px solid rgb(236, 102, 49);
+    transform-origin: right center;
+}
+.animacija1-unutar .sadrzaj{
+    display: flex;
+    width: 80%;
+}
+.animacija1-unutar .sadrzaj>div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+}
+.animacija1-unutar .sadrzaj .animacija1-lijevi .tekst{
+    border-bottom: 2px solid rgb(236, 102, 49);
+}
+.animacija1-unutar .sadrzaj .animacija1-lijevi .obavijest p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(236, 102, 49);
+    font-size: 2vw;
+    padding: 3% 0;
+}
+.animacija1-unutar .sadrzaj .animacija1-desni .slika img{
+    width: 25vw;
+}
+/*------treci---------*/
+
+.treci .treci-herkul{
+    transform-origin: bottom left;
+}
+/*------pokolj-------*/
+.pokolj{
+    padding: 5% 0 8% 0;
+}
+/*--------cetvrti---------*/
+.cetvrti .cetvrti-herkul{
+    transform-origin: bottom center;
+}
+ 
+.medju{
+    width: 100%;
+    height: 100vh;
+}
+/*--------peti---------*/
+
+.peti .peti-tekst>div:nth-child(2){
+    transform: translateX(-28%);
+}
+/*-----animacija2--------*/
+.animacija2{
+    width: 100%;
+    background-color: rgb(240, 233, 219);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.animacija2-unutar{
+    width: 65vw;
+    height: 50vw;
+    margin: 10% 0;
+    display: flex;
+}
+.animacija2-unutar>div{
+    margin-right: 5%;
+}
+.animacija2-unutar .animacija2-pravokutnik{
+    width: 3vw;
+    height:100%;
+    border: 2px solid rgb(236, 102, 49);
+}
+.animacija2-unutar .srednji{
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.animacija2-unutar .srednji .tekst{
+    margin-top: 5%;
+}
+.animacija2-unutar .srednji .animacija2-naslov p{
+    color: rgb(236, 102, 49);
+    font-size: 5vw;
+    font-family: "Sedgwick Ave Display", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.animacija2-unutar .srednji .obavijest{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(236, 102, 49);
+    font-size: 2vw;
+    padding: 3% 0;
+    border-bottom: 2px solid rgb(236, 102, 49);
+}
+.animacija2-unutar .desni{
+    width: 50%;
+}
+.opis2{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(46, 46, 46);
+    padding: 4% 0;
+    line-height: 1.4;
+    font-size: 1.2vw;
+}
+.animacija2-unutar .desni .slika img{
+    width: 100%;
+}
+/*-----------sesti---------*/
+.sesti .sesti-tekst>div:nth-child(1){
+    transform: translateX(8%);
+}
+.sesti .sesti-prednji{
+    transform-origin: bottom right;
+}
+.sesti .sesti-herkul{
+    transform-origin: bottom right;
+}
+.sesti .sesti-planina{
+    transform-origin: bottom center;
+}
+/*------sedmi--------*/
+/*------osmi---------*/
+.osmi-prednji{
+    transform-origin: bottom right;
+}
+.osmi-prednji{
+    transform-origin: bottom center;
+}
+/*-----deveti-------*/
+.deveti-prednji{
+    transform-origin: bottom left;
+}
+.deveti-herkul{
+    transform-origin: bottom center;
+}
+/*-----deseti-------*/
+.deseti-srednji{
+    transform-origin: bottom right;
+}
+.deseti-herkul{
+    transform-origin: bottom right;
+}
+/*-------jedanaesti--------*/
+.jedanaesti .jedanaesti-tekst>div:nth-child(2){
+    transform: translateX(3%);
+}
+.jedanaesti-srednji{
+    transform-origin: bottom center;
+}
+.jedanaesti-prednji{
+    transform-origin: bottom right;
+}
+/*-------dvanaesti--------*/
+
+/*-------footer--------*/
+
+.footer{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-unutar{
+    width: 90vw;
+    height: 40vh;
+    display: flex;
+}
+.footer-unutar>div{
+    width: 50%;
+    color: rgb(199, 199, 199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer-unutar>div p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-unutar .lijevi h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+}
+.footer-unutar .desni p{
+    text-align: center;
+    font-size: 35px;
+}
+.footer-unutar .lijevi p{
+    font-size: 20px;
+    padding: 2% 0;
+}
+/*------responzivno--------*/
+@media only screen and (max-width: 800px) {
+    .footer-unutar{
+        flex-direction: column-reverse;
+    }
+    .footer-unutar>div{
+        width: 100%;
+        padding: 3% 0;
+    }
+  }
+
+.fiksirano{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    top: 100px;
+    left: 0;
+}
+
+/*mouse parallax*/
+
+.container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .polozaj{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-right: 5%;
+  }
+  .polozaj2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .polozaj2>div{
+    margin: 5%;
+  }
+  .polozaj2>div>img{
+    width: 120%;
+    height: auto;
+  }
+  
+  .oblik{
+    width: 40vw;
+    transition: transform 0.1s ease;
+    transform-origin: right;
+  }
+  .oblik img{
+    width: 100%;
+    height: auto;
+  }
+
+  .opis-absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
